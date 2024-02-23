@@ -1,0 +1,71 @@
+% Custom Symbols 
+%{
+\newcommand\halmos{\rule{.36em}{2ex}} % Custom QED Symbol
+\def\contradict{\tikz[baseline, x=0.22em, y=0.22em, line width=0.032em]\draw (0,2.83)--(2.83,0) (0.71,3.54)--(3.54,0.71) (0,0.71)--(2.83,3.54) (0.71,0)--(3.54,2.83);}
+\renewcommand{\qedsymbol}{\halmos}
+\renewenvironment{proof}{{\bfseries \textit{Proof} \\}}{\qedsymbol}
+
+\makeatletter
+\newcommand{\crossout}[1]{% Crosses out symbol
+	\begingroup
+	\settowidth{\dimen@}{#1}%
+	\setlength{\unitlength}{0.05\dimen@}%
+	\settoheight{\dimen@}{#1}%
+	\count@=\dimen@
+	\divide\count@ by \unitlength
+	\begin{picture}(0,0)
+		\put(0,0){\line(20,\count@){20}}
+		\put(0,\count@){\line(20,-\count@){20}}
+	\end{picture}%
+	#1%
+	\endgroup
+}
+%}
+
+% Mathematics (General)
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newcommand{\lemref}[1]{\textit{Lemma \ref{#1}}}
+\newcommand{\thmref}[1]{\textbf{Theorem \ref{#1}}}
+\newcommand{\colref}[1]{\textit{Corollary \ref{#1}}}
+
+% Physics (Quantum Mechanics)
+%\newcommand{\norm}[#1]{\lVert {#1} \rVert}
+%\newcommand{\ket}[1]{\vert{#1}\rangle}
+%\newcommand{\bra}[1]{\langle{#1}\vert}
+%\newcommand{\braket}[2]{\langle {#1} \vert {#2} \rangle}
+\newcommand{\expectation}[1]{\langle{#1}\rangle}
+
+% Physics (Electrodynamics)
+\newcommand{\del}{\overline{\nabla}}
+\usetikzlibrary{arrows}
+%Script r (scalar)
+\newcommand{\rc}{%
+\resizebox{!}{1.25ex}{%
+    \begin{tikzpicture}[>=round cap]
+        \clip (0.09em,-0.05ex) rectangle (0.61em,0.81ex);
+        \draw [line width=.11ex, <->, rounded corners=0.13ex] (0.1em,0.1ex) .. controls (0.24em,0.4ex) .. (0.35em,0.8ex) .. controls (0.29em,0.725ex) .. (0.25em,0.6ex) .. controls (0.7em,0.8ex) and (0.08em,-0.4ex) .. (0.55em,0.25ex);
+    \end{tikzpicture}%
+}%
+}
+
+%Script r (vector)
+\newcommand{\brc}{%
+\resizebox{!}{1.3ex}{%
+    \begin{tikzpicture}[>=round cap]
+        \clip (0.085em,-0.1ex) rectangle (0.61em,0.875ex);
+        \draw [line width=.2ex, <->, rounded corners=0.13ex] (0.1em,0.1ex) .. controls (0.24em,0.4ex) .. (0.35em,0.8ex) .. controls (0.29em,0.725ex) .. (0.25em,0.6ex) .. controls (0.7em,0.8ex) and (0.08em,-0.4ex) .. (0.55em,0.25ex);
+    \end{tikzpicture}%
+}%
+}
+
+%Script r with a hat (unit vector)
+\newcommand{\hrc}{\hat{\brc}}
+
+
+% Document (General)
+\newcommand{\figref}[1]{Fig. \ref{#1}}
+\newcommand{\source}[1]{\caption*{Source: {#1}} }
+\newcommand{\sourceref}[1]{\caption*{Source: {\fullcite{#1}}}}

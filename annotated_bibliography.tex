@@ -1,0 +1,88 @@
+%=================== HEADER =====================%
+% Basic Document Formatting
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[left=1in, right=1in, top=0.9in]{geometry}
+
+% Other Preamble
+\include{preamble/preamble}
+\include{preamble/macros}
+\include{preamble/tikz}
+\usepackage{mathrsfs}
+\bibliography{references.bib}
+
+%============ Document Information ==============%
+\newcommand\course{ESS205} %[COURSE INFORMATION!!!]
+\newcommand\psetnum{Geothermal Energy in Canada}  %[PROBLEM SET NUMBER!!!]
+\newcommand\yourname{Aditya Rao 1008307761 \\ Andrew Lehmann 1008751405}  %[NAME AND STUDENT NUMBER!!!]
+\newcommand{\subject}{\large{\course}}
+%================ END OF HEADER =================%
+
+% LaTeX Template by Aditya Rao
+
+\begin{document}
+    \title{\psetnum \\ \large{\course}}
+	\author{\yourname}
+	\date{January 30, 2024}
+	\maketitle
+
+	%\pagenumbering{roman}
+
+	%\tableofcontents
+	
+	%\newpage
+	%So the heading doesn't show up on table of contents page
+	%\lhead{\yourname\ \vspace{0.1cm} \\ \course}
+	\lhead{\yourname\ \vspace{0.1cm}}
+    \chead{\textbf{\subject} \\ \psetnum}
+    \rhead{\leftmark}
+
+    \section[Topic]{Geothermal Energy in Canada}
+        Our topic will focus on current methods of geothermal energy production in Canada with a focus on the current efforts in Ontario.
+        
+        \textbf{Method: Paper}
+
+        
+    \section{Three Key Papers}
+        \subsection{Paper 1: \textit{Geothermal Energy in Canada, Jessop et al.}}
+            \textbf{\fullcite{geothermal_energy_in_canada}}
+            
+            \vspace{0.5cm}
+            
+            This source provides a good general overview of the state of Geothermal energy in Canada. It focuses on two major regions: the Meager Mountain volcanic complex in British Columbia and the Western Platform in British Columbia. It is observed that the potential thermal energy of the water temperature of the Western Platform is ``very large'' with only ``1\% of the resource base'' being almost $10\times$ the estimated thermal equivalent of Canada's oil reserves. The paper further goes into logistics difficulties in creating geothermal plants in Eastern Canada (i.e. Ontario).
+
+        \subsection{Paper 2: \textit{Geothermal Energy Resource Potential of Canada, Grasby et al.}}
+            \textbf{\fullcite{govt_canada_2022}}
+
+            \vspace{0.5cm}
+            This source is a geological survey that provides an overview of Canada's potential to incorporate geothermal energy into its electrical grid and transition away from fuels that use hydrocarbons. The extensive survey delves also delves into the geological challenges, and regulatory issues that may arise. 
+
+
+        \subsection{Paper 3:Supercritical Thermodynamics of the Rock/Fluid Geothermal System.}
+            \textbf{\fullcite{suárez_2021}}
+            
+            \vspace{0.5cm}
+            This paper is relevant to geothermal energy in Canada, as it defines a concise mathematical description of the behaviour of water in the supercritical region. The supercritical state of fluid of a given substance at a temperature and pressure above its critical point may overcome limitations from mass transfer in fluids, significantly increasing efficiency in geothermal systems. Many power generation systems use water as their primary working fluid, and increasing the temperature of the water will increase its power output and efficiency, which implies having a paper that details the behaviour of water in this state is applicable. 
+
+    \section[Diagram]{Quantitative Diagram or Map}
+        \begin{figure}[H]
+            \captionsetup{{width=0.7\linewidth}}
+            \centering
+            \includegraphics[width=0.7\textwidth]{figures/diagram.png}
+            \caption{Quantitative Diagram}
+            \textbf{\sourceref{govt_canada_2022}}
+        \end{figure}
+
+        %\subsection{Diagram Reference}
+        %    The diagram was found at\autocite{diagram_ref}
+        
+        \subsection{Visual's usefulness to topic}
+            This provides a general basis for describing Canada's heat capacity at a certain depth. It will be useful in discussing the real-world applications of our analysis of the thermodynamic effects of geothermal energy in Canada.
+		
+    %\newpage
+    \section{References}
+        \nocite{*}
+        \printbibliography[heading=none]
+
+\end{document}

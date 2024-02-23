@@ -1,0 +1,81 @@
+\usepackage{setspace}
+
+\usepackage{fancyhdr}
+\setlength{\parindent}{0in}
+
+% Page Formatting
+\pagenumbering{arabic} %\pagenumbering{gobble}
+\onehalfspacing %doublespacing
+\pagestyle{fancy}
+\usepackage{pdfpages}
+
+% Heading Formatting
+\headheight 32pt
+
+% Link Formatting
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,
+	allcolors=black
+	%citecolor=black,
+	%filecolor=black,
+	%linkcolor=black,
+	%urlcolor=black
+}
+
+\usepackage{mdframed}
+
+% Code Formatting
+\usepackage{listings}
+\lstset{
+	basicstyle=\footnotesize,
+	numbers=left,
+	stepnumber=1,
+	showstringspaces=false,
+	tabsize=1,
+	breaklines=true,
+	breakatwhitespace=false
+}
+
+% Figures & Drawings
+\usepackage{graphicx, caption}
+\usepackage{animate}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{pict2e}
+
+% Physics
+\usepackage{physics}
+
+% Mathematics
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{upgreek} % More Greek letters
+
+% I don't really know what this is but I don't want to break shit
+\usepackage{aliascnt}
+\newaliascnt{eqfloat}{equation}
+\newfloat{eqfloat}{h}{eqflts}
+\floatname{eqfloat}{Equation}
+\newcommand*{\ORGeqfloat}{}
+\let\ORGeqfloat\eqfloat
+\def\eqfloat{%
+	\let\ORIGINALcaption\caption
+	\def\caption{%
+		\addtocounter{equation}{-1}%
+		\ORIGINALcaption
+	}%
+	\ORGeqfloat
+}
+
+
+%}
+
+% Bibliography (Citations) Formatting
+
+%\usepackage{cite}
+\usepackage{caption}
+\usepackage[backend=bibtex,style=apa]{biblatex} %works really really well, but no MLA format
+%\usepackage[backend=biber,style=mla]{biblatex} %Doesn't print all sources for some reason

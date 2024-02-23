@@ -1,0 +1,36 @@
+\tikzset{>=latex} % for LaTeX arrow head
+\colorlet{myred}{red!85!black}
+\colorlet{mydarkred}{red!55!black}
+\colorlet{mylightred}{red!85!black!12}
+\colorlet{myfieldred}{mydarkred!5} % for S' background
+\colorlet{myredhighlight}{myred!20} % highlights simultaneity in ladder paradox
+\colorlet{myblue}{blue!80!black}
+\colorlet{mydarkblue}{blue!50!black}
+\colorlet{mylightblue}{blue!50!black!30}
+\colorlet{mylightblue2}{myblue!10}
+\colorlet{mygreen}{green!80!black}
+\colorlet{mypurple}{blue!40!red!80!black}
+\colorlet{mydarkgreen}{green!50!black}
+\colorlet{mydarkpurple}{blue!40!red!50!black}
+\colorlet{myorange}{orange!40!yellow!95!black}
+\colorlet{mydarkorange}{orange!40!yellow!85!black}
+\colorlet{mybrown}{brown!20!orange!90!black}
+\colorlet{mydarkbrown}{brown!20!orange!55!black}
+\colorlet{mypurplehighlight}{mydarkpurple!20} % highlights simultaneity in ladder paradox
+\tikzstyle{world line}=[myblue!40,line width=0.3]
+\tikzstyle{world line t}=[mypurple!50!myblue!40,line width=0.3]
+\tikzstyle{world line'}=[mydarkred!40,line width=0.3]
+\tikzstyle{mysmallarr}=[-{Latex[length=3,width=2]},thin]
+\tikzstyle{mydashed}=[dash pattern=on 3 off 3]
+\tikzstyle{rod}=[mydarkbrown,draw=mydarkbrown,double=mybrown,double distance=2pt,
+                 line width=0.2,line cap=round,shorten >=1pt,shorten <=1pt]
+%\tikzstyle{rod'}=[rod,draw=mydarkbrown!80!red!85,double=mybrown!80!red!85]
+\tikzstyle{vector}=[->,line width=1,line cap=round]
+\tikzstyle{vector'}=[vector,shorten >=1.2]
+\tikzstyle{particle}=[mygreen,line width=0.9]
+\tikzstyle{photon}=[-{Latex[length=5,width=4]},myorange,line width=0.8,decorate,
+                    decoration={snake,amplitude=1.0,segment length=5,post length=5}]
+
+\def\tick#1#2{\draw[thick] (#1) ++ (#2:0.06) --++ (#2-180:0.12)}
+\def\tickp#1#2{\draw[thick,mydarkred] (#1) ++ (#2:0.06) --++ (#2-180:0.12)}
+\def\Nsamples{100} % number samples in plot
