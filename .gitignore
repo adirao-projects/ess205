@@ -1,0 +1,14 @@
+essay.pdf
+annotated_bibliography.pdf
+esssay-blx.bib
+annotated_bibliography-blx.bib
+essay.synctex.gz
+annotated_bibliography.synctex.gz
+
+*log
+*.bbl
+*.blg
+*fdb_latexmk
+*.run.xml
+*.xml
+*.aux
